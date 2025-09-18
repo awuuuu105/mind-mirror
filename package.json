@@ -6,7 +6,7 @@
   "scripts": {
     "dev:client": "vite --host --port 3000",
     "dev": "npm run dev:client",
-    "build:client": "vite build --outDir dist/static",
+    "build:client": "vite build --outDir dist --base=/mind-mirror/",
     "build": "rimraf dist && npm run build:client && copy package.json dist && type nul > dist\\build.flag",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
